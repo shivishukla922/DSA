@@ -68,10 +68,10 @@ public static boolean search(Node root,int key){
         return true;
     }
     else if(root.data>key){
-        search(root.left,key);
+       return search(root.left,key);
     }
     else{
-        search(root.right,key);
+       return search(root.right,key);
     }
 }
 	public static void main(String[] args) {
