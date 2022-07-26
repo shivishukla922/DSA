@@ -133,7 +133,34 @@ public class Main
 	
 	}
 }
-
+# LEVEL ORDER
+ public static void levelOrder(Node root){
+        Queue<Node> q = new LinkedList<>();
+        q.add(root);
+        q.add(null);
+        while(!q.isEmpty()){
+            Node newNode=q.remove();
+            if(newNode ==null){
+                System.out.println();
+                if(q.isEmpty()){
+                    break;
+                }
+                else{
+                    q.add(null);
+                }
+                
+            }
+            else{
+                System.out.print(newNode.data +" ");
+                if(newNode.left !=null){
+                    q.add(newNode.left);
+                }
+                if(newNode.right !=null){
+                    q.add(newNode.right);
+                }
+            }
+        }
+    }
 
 #BINARY SEARCH TREE
 
