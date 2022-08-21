@@ -260,4 +260,42 @@ class GFG {
 	}
 }
 
+#RECURSIVE METHOD
 
+
+class GFG {
+    public static int binarySearch(int arr[],int key,int low,int high){
+        
+        while(low<=high){
+            int mid=low +(high-low)/2;
+            if(key==arr[mid]){
+                return mid;
+            }
+            else if(key<arr[mid]){
+            return binarySearch(arr,key,low,mid-1);
+                
+            }
+            else{
+                return binarySearch(arr,key,mid+1,high);
+            }
+        }
+        return -1;
+        
+    }
+	public static void main (String[] args) {
+	    GFG ob= new GFG();
+	    int arr[]={10,30,50,100,500,701};
+	    int n = arr.length;
+	    int key=701;
+	   int ans= ob.binarySearch(arr,key,0,n-1);
+	   if(ans==-1){
+	       System.out.println("not found");
+	   }
+	   else{ 
+	       System.out.println("found at " +ans);
+	   }
+	    
+	    
+	
+	}
+}
