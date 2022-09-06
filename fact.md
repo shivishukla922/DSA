@@ -1,5 +1,5 @@
 # DSA
-public  static int printSum(int n){
+public  static int printfact(int n){
         if(n==1||n==0){
            
             
@@ -13,7 +13,7 @@ public  static int printSum(int n){
 	public static void main(String[] args) {
 	    int n=5;
 		
-	int ans=	printSum(n);
+	int ans=	printfact(n);
 	System.out.println(ans);
 	
 	}
